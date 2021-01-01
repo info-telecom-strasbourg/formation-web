@@ -1,0 +1,21 @@
+/* To list elements */
+
+.listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* An animal card */
+
+.animal-card {
+    margin: 10px;
+}
+
+
+/* The image on an animal card */
+
+.animal-card img {
+    height: 160px;
+}

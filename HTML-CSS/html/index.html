@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+
+    <title>Les poti-animaux</title>
+</head>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="connection.html">Connection</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <h1 class="text-center my-3">
+        Les poti-animaux
+    </h1>
+</header>
+
+<body>
+
+    <!-- Ajouter un animal -->
+    <div class="text-center my-3">
+        <a href="add.html" class="btn btn-primary big-btn" role="button">Ajouter un animal</a>
+    </div>
+
+    <!-- Liste des poti-animaux -->
+    <div class="listing mt-5">
+        <!-- Poti-chat -->
+        <div class="card animal-card" style="width: 18rem;">
+            <img class="card-img-top" src="../images/chat1.jpeg" alt="Animal image">
+            <div class="card-body">
+                <h5 class="card-title text-center">Poti-chat</h5>
+                <div class="listing">
+                    <button type="button" class="btn btn-primary small-btn m-1" data-toggle="modal" data-target="#modal-poti-chat">Voir plus</button>
+                    <a href="modification.html" class="btn btn-primary small-btn m-1" role="button">Modifier</a>
+                    <button type="button" class="btn btn-primary small-btn m-1">Supprimer</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal poti-chat -->
+        <div class="modal fade" id="modal-poti-chat" tabindex="-1" role="dialog" aria-labelledby="modal-poti-chat-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-poti-chat-title">Poti-chat</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nom : Patrick</p>
+                        <p>Type : Poti-chat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Poti-chien -->
+        <div class="card animal-card" style="width: 18rem;">
+            <img class="card-img-top" src="../images/chien1.jpg" alt="Animal image">
+            <div class="card-body">
+                <h5 class="card-title text-center">Poti-chien</h5>
+                <div class="listing">
+                    <button type="button" class="btn btn-primary small-btn m-1" data-toggle="modal" data-target="#modal-poti-chien">Voir plus</button>
+                    <a href="modification.html" class="btn btn-primary small-btn m-1" role="button">Modifier</a>
+                    <button type="button" class="btn btn-primary small-btn m-1">Supprimer</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal poti-chien -->
+        <div class="modal fade" id="modal-poti-chien" tabindex="-1" role="dialog" aria-labelledby="modal-poti-chien-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-poti-chien-title">Poti-chien</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nom : Benoit</p>
+                        <p>Type : Poti-chien</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Poti-oiseau -->
+        <div class="card animal-card" style="width: 18rem;">
+            <img class="card-img-top" src="../images/oiseau1.jpg" alt="Animal image">
+            <div class="card-body">
+                <h5 class="card-title text-center">Poti-oiseau</h5>
+                <div class="listing">
+                    <button type="button" class="btn btn-primary small-btn m-1" data-toggle="modal" data-target="#modal-poti-oiseau">Voir plus</button>
+                    <a href="modification.html" class="btn btn-primary small-btn m-1" role="button">Modifier</a>
+                    <button type="button" class="btn btn-primary small-btn m-1">Supprimer</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal poti-oiseau -->
+        <div class="modal fade" id="modal-poti-oiseau" tabindex="-1" role="dialog" aria-labelledby="modal-poti-oiseau-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-poti-oiseau-title">Poti-oiseau</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nom : Bubulle</p>
+                        <p>Type : Poti-oiseau</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Poti-lapin -->
+        <div class="card animal-card" style="width: 18rem;">
+            <img class="card-img-top" src="../images/lapin1.jpg" alt="Animal image">
+            <div class="card-body">
+                <h5 class="card-title text-center">Poti-lapin</h5>
+                <div class="listing">
+                    <button type="button" class="btn btn-primary small-btn m-1" data-toggle="modal" data-target="#modal-poti-lapin">Voir plus</button>
+                    <a href="modification.html" class="btn btn-primary small-btn m-1" role="button">Modifier</a>
+                    <button type="button" class="btn btn-primary small-btn m-1">Supprimer</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal poti-lapin -->
+        <div class="modal fade" id="modal-poti-lapin" tabindex="-1" role="dialog" aria-labelledby="modal-poti-lapin-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-poti-lapin-title">Poti-lapin</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nom : Jojo</p>
+                        <p>Type : Poti-lapin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
