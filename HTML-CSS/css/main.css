@@ -38,3 +38,12 @@
 .form-size {
     margin: 0 25%;
 }
+
+/* ### VISIBILITY ### */
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="../css/main.css">
 
@@ -17,8 +18,9 @@
 <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
@@ -42,29 +44,75 @@
 
 
     <!-- Formulaire d'ajout -->
-    <form class="form-size">
-        <div class="form-group">
+    <form id="add-new-animal" class="form-size needs-validation">
+        <div class="form-group mb-3">
             <label>Nom</label>
-            <input type="text" class="form-control" placeholder="Nom">
+            <input type="text" class="form-control has-validation" placeholder="Nom" pattern=".{5,}" required
+                title="5 charactères au minimum">
+            <div class="invalid-feedback"></div>
+        </div>
+        <div class="form-group mb-3">
             <label>Type</label>
-            <select class="custom-select mr-sm-2">
-                <option selected>Poti-chat</option>
-                <option value="1">Poti-chien</option>
-                <option value="2">Poti-oiseau</option>
-                <option value="3">Poti-lapin</option>
-              </select>
+            <div class="d-flex align-items-center justify-content-between">
+                <select id="selectType" class="custom-select mr-sm-2 has-validation" required>
+                    <option value="0" selected>Selectionnez...</option>
+                    <option value="1">Poti-chat</option>
+                    <option value="2">Poti-chien</option>
+                    <option value="3">Poti-oiseau</option>
+                    <option value="4">Poti-lapin</option>
+
+                </select>
+                <button id="add-animal-option" class="ml-2 btn btn-primary small-btn" data-toggle="modal" data-target="#modal-add-type">
+                    +
+                </button>
+            </div>
+            <div class="invalid-feedback"></div>
         </div>
         <div class="text-center my-3">
             <button type="submit" class="btn btn-primary small-btn">Ajouter</button>
         </div>
     </form>
 
+    <div id="modal-add-type" class="modal fade" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modal-add-opt-title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-add-opt-title">Ajoutez une option</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-size needs-validation">
+                        <div class="form-group mb-3">
+                            <label>Ajouter un type de poti-animal</label>
+                            <input id="input-type" type="text" class="form-control has-validation" pattern=".{5,}" placeholder="Nom" required
+                                title="5 charactères au minimum">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="text-center my-3">
+                            <button type="submit" class="btn btn-primary small-btn">Ajouter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
+    <script src="../js/add.js"></script>
 
 </body>
 
