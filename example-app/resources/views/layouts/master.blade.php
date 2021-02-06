@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('poti-animals.index') }}">Accueil<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="connection.html">Connection</a>
@@ -48,7 +48,7 @@
 </header>
 
 <body>
-    <main class="main-content">
+    <main class="main-content container">
         @yield('content')
     </main>
 
