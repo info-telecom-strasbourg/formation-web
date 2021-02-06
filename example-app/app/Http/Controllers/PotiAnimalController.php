@@ -95,7 +95,7 @@ class PotiAnimalController extends Controller
     {
         $potiAnimal->delete();
 
-        return redirect()->route('poti-animals');
+        return redirect()->route('poti-animals.index');
     }
 
     /**
