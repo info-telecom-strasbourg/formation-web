@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePotiAnimauxTable extends Migration
+class CreatePotiAnimalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,7 @@ class CreatePotiAnimauxTable extends Migration
         /**
          * Table poti_animaux
          */
-        Schema::create('poti_animaux', function (Blueprint $table) {
+        Schema::create('poti_animals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string("name");
