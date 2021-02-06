@@ -13,9 +13,17 @@ class CreatePotiAnimauxesTable extends Migration
      */
     public function up()
     {
+        /**
+         * Table poti_animaux
+         */
         Schema::create('poti_animaux', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string("name");
+            $table->foreign('type_id')
+                ->references('id')
+                ->on('poti_animaux_type')
+				->onDelete('cascade');
         });
     }
 
