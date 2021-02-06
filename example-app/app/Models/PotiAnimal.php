@@ -9,6 +9,8 @@ class PotiAnimal extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     /**
      * Get the type of the poti animal.
      */
