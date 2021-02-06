@@ -38,18 +38,7 @@ class PotiAnimalController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|min:5',
-            'type' => 'required'
-        ]);
-        
-        /*
-            Parfois, une verification plus poussé sera nécessaire pour être
-            sûr que les informations ne poseront pas de problème lors
-            de l'appel à "create".
-        */
-
-        $potiAnimal = PotiAnimal::create($validatedData);
+        $potiAnimal = PotiAnimal::create($this->validatePotiAnimal());
 
         // pour une route avec l'URI suivante : poti-animals/{poti_animal}
         return redirect()->route('poti-animals.show', ['poti_animal' => $potiAnimal]);
@@ -89,12 +78,7 @@ class PotiAnimalController extends Controller
      */
     public function update(Request $request, PotiAnimal $potiAnimal)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|min:5',
-            'type' => 'required'
-        ]);
-
-        $potiAnimal->update($validatedData);
+        $potiAnimal->update($this->validatePotiAnimal());
 
         // pour une route avec l'URI suivante : poti-animals/{poti_animal}
         return redirect()->route('poti-animals.show', ['poti_animal' => $potiAnimal]);
@@ -113,4 +97,23 @@ class PotiAnimalController extends Controller
 
         return redirect()->route('poti-animals');
     }
+
+    /**
+	 * Validate the user's request to create a PotiAnimal.
+	 *
+	 * @return array the validated request
+	 */
+	public function validatePotiAnimal()
+	{
+		return request()->validate([
+            'name' => 'required|min:5',
+            'type' => 'required'
+        ]);
+
+        /*
+            Parfois, une verification plus poussé sera nécessaire pour être
+            sûr que les informations ne poseront pas de problème lors
+            de l'appel à "store" ou "update".
+        */
+	}
 }
