@@ -47,7 +47,7 @@ class PotiAnimalController extends Controller
      */
     public function show(PotiAnimal $potiAnimal)
     {
-        //
+        return view('animals.show', compact('potiAnimal'));
     }
 
     /**
