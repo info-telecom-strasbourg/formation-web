@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PotiAnimal;
+use App\Models\PotiAnimauxType;
 use Illuminate\Http\Request;
 
 class PotiAnimalController extends Controller
@@ -25,7 +26,8 @@ class PotiAnimalController extends Controller
      */
     public function create()
     {
-        //
+        $types = PotiAnimauxType::all();
+        return view('animals.create', compact('types'));
     }
 
     /**
