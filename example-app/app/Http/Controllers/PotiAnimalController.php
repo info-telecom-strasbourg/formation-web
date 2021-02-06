@@ -105,9 +105,10 @@ class PotiAnimalController extends Controller
 	 */
 	public function validatePotiAnimal()
 	{
+        var_dump(request('type'));
 		return request()->validate([
             'name' => 'required|min:5',
-            'type' => 'required'
+            'types_id' => 'required'
         ]);
 
         /*
