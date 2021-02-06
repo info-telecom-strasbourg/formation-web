@@ -16,6 +16,7 @@ class CreatePotiAnimauxTypesTable extends Migration
         Schema::create('poti_animaux_types', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string("name");
         });
     }
 
