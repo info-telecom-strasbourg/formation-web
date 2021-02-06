@@ -38,8 +38,24 @@ class PotiAnimalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|min:5',
+            'type' => 'required'
+        ]);
+        
+        /*
+            Parfois, une verification plus poussé sera nécessaire pour être
+            sûr que les informations ne poseront pas de problème lors
+            de l'appel à "create".
+        */
+
+        $potiAnimal = PotiAnimal::create($validatedData);
+
+        // pour une route avec l'URI suivante : poti-animals/{poti_animal}
+        return redirect()->route('poti-animals.show', ['poti_animal' => $potiAnimal]);
     }
+
+    
 
     /**
      * Display the specified resource.
