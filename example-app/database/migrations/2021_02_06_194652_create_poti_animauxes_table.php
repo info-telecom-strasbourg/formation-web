@@ -13,7 +13,7 @@ class CreatePotiAnimauxesTable extends Migration
      */
     public function up()
     {
-        Schema::create('poti_animauxes', function (Blueprint $table) {
+        Schema::create('poti_animaux', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreatePotiAnimauxesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('poti_animauxes');
+        Schema::dropIfExists('poti_animaux');
     }
 }
