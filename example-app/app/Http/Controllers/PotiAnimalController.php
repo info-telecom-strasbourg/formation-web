@@ -109,6 +109,8 @@ class PotiAnimalController extends Controller
      */
     public function destroy(PotiAnimal $potiAnimal)
     {
-        //
+        $potiAnimal->delete();
+
+        return redirect()->route('poti-animals');
     }
 }
