@@ -44,6 +44,22 @@ services:
             - sail
         healthcheck:
           test: ["CMD", "mysqladmin", "ping"]
+
+    phpmyadmin:
+        depends_on:
+            - mysql
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - '8181:80'
+        restart: always
+        environment:
+            PMA_ARBITRARY: 1
+            PMA_HOST: mysql
+            PMA_USER: '${DB_USERNAME}'
+            PMA_PASSWORD: '${DB_PASSWORD}'
+            PMA_PORT: 3306
+        networks:
+            - sail
 #    pgsql:
 #        image: postgres:13
 #        ports:
