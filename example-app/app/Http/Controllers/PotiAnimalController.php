@@ -89,8 +89,17 @@ class PotiAnimalController extends Controller
      */
     public function update(Request $request, PotiAnimal $potiAnimal)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|min:5',
+            'type' => 'required'
+        ]);
+
+        $potiAnimal->update($validatedData);
+
+        // pour une route avec l'URI suivante : poti-animals/{poti_animal}
+        return redirect()->route('poti-animals.show', ['poti_animal' => $potiAnimal]);
     }
+
 
     /**
      * Remove the specified resource from storage.
