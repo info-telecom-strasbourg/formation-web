@@ -14,7 +14,8 @@ class PotiAnimalController extends Controller
      */
     public function index()
     {
-        //
+        $potiAnimals = PotiAnimal::all();
+        return view('animals.index', compact('potiAnimals'));
     }
 
     /**
