@@ -66,7 +66,7 @@ class PotiAnimalController extends Controller
     public function edit(PotiAnimal $potiAnimal)
     {
         $types = PotiAnimauxType::all();
-        return view('animals.edit', compact('types'));
+        return view('animals.edit', compact('potiAnimal', 'types'));
     }
 
     /**
