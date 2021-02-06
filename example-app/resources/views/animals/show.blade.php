@@ -14,8 +14,12 @@
             <div class="listing">
                 <a href="{{ route('poti-animals.edit', [$potiAnimal->id]) }}" class="btn btn-warning small-btn m-1"
                     role="button">Modifier</a>
-                <a href="{{ route('poti-animals.destroy', [$potiAnimal->id]) }}"
-                    class="btn btn-danger small-btn m-1">Supprimer</a>
+                <form action="{{ route('poti-animals.destroy', [$potiAnimal->id]) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+
+                    <button class="btn btn-danger small-btn m-1" type="submit">Supprimer</button>
+                </form>
                 <button class="btn btn-primary small-btn m-1 btn-toggle">Masquer</button>
             </div>
         </div>
