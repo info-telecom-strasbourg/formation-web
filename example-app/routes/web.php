@@ -15,7 +15,7 @@ use App\Http\Controllers\PotiAnimalController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('poti-animals.index');
 });
 
 Route::resources(['poti-animals' => PotiAnimalController::class]);
