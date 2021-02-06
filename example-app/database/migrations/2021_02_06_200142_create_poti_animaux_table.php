@@ -20,9 +20,10 @@ class CreatePotiAnimauxTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string("name");
-            $table->foreign('type_id')
+            $table->bigInteger('types_id')->unsigned();
+            $table->foreign('types_id')
                 ->references('id')
-                ->on('poti_animaux_type')
+                ->on('poti_animaux_types')
 				->onDelete('cascade');
         });
     }
