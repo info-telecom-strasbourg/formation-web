@@ -1,4 +1,5 @@
 `php artisan` : execute la commande localement
+
 `sail artisan`: execute la commande dans Laravel Sail (dans notre conteneur)
 
 # Migration
@@ -28,8 +29,7 @@
             $table->bigInteger('types_id')->unsigned();
 			$table->foreign('type_id')
 					->references('id')
-					->on('poti_animals_type')
-					->onDelete('cascade');
+					->on('poti_animals_types');
 		});
         ```
 
