@@ -33,11 +33,34 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('poti-animals.index') }}">Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('poti-animals.index') }}">Accueil<span
+                            class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="connection.html">Connection</a>
-                </li>
+            </ul>
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Authentication Links -->
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                @endguest
             </ul>
         </div>
     </nav>
@@ -52,8 +75,8 @@
     <main class="main-content container">
         @yield('content')
     </main>
-    
-    <script src="href="{{ URL::asset('js/main.js') }}""></script>
+
+    <script src="href=" {{ URL::asset('js/main.js') }}""></script>
     @yield('js')
 </body>
 
