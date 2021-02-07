@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::resources(['poti-animals' => PotiAnimalController::class]);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
