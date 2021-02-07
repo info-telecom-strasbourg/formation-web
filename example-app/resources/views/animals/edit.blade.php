@@ -33,7 +33,7 @@
             <div class="invalid-feedback"></div>
         </div>
         <div class="text-center my-3">
-            <button type="submit" class="btn btn-success small-btn">Ajouter</button>
+            <button type="submit" class="btn btn-success small-btn">Modifier</button>
         </div>
     </form>
 
