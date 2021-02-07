@@ -1,0 +1,70 @@
+/* ### BUTTONS ### */
+
+
+/* Big button (used with btn and btn-primary) */
+
+.big-btn,
+.big-btn:focus {
+    border: none;
+    background-color: #1c1a54;
+    font-size: 1.3rem;
+    box-shadow: none;
+}
+
+.big-btn:hover {
+    background-color: #49469f;
+}
+
+
+/* Small button (used with btn and btn-primary) */
+
+.small-btn,
+.small-btn:focus {
+    border: none;
+    background-color: #d34545;
+    box-shadow: none;
+}
+
+.small-btn:hover {
+    background-color: #9f4646;
+}
+
+
+/* ### FORMS ### */
+
+
+/* Margin for the forms  */
+
+.form-size {
+    margin: 0 25%;
+}
+
+/* ### VISIBILITY ### */
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* To list elements */
+
+.listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* An animal card */
+
+.animal-card {
+    margin: 10px;
+}
+
+
+/* The image on an animal card */
+
+.animal-card img {
+    height: 160px;
+}
