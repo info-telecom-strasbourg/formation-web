@@ -11,6 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    @yield('css')
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -51,8 +52,9 @@
     <main class="main-content container">
         @yield('content')
     </main>
-
+    
     <script src="href="{{ URL::asset('js/main.js') }}""></script>
+    @yield('js')
 </body>
 
 </html>
