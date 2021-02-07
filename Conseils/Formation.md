@@ -246,6 +246,10 @@ Pour remplacer du code php par sa valeur : `{{ $var }}` ou `{{ fonction(...) }}`
 @else
 	//
 @endauth
+
+@php
+	//code php
+@endphp
 ```
 La variable `$loop` permet d'avoir accès à de nombreuses informations, vous les retrouverez [ici](https://laravel.com/docs/8.x/blade#the-loop-variable).
 
